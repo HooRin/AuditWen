@@ -37,10 +37,16 @@ Further derive requirement of LLM applied in audit domain is LLM can act as an i
 | Q5 | Based on the uploaded audit ledger list, audit ledgers belonging to the same audit issue are merged into the same document and output. (基于上传的审计台账列表，将属于同一审计问题的审计台账归并到同一文档中并输出。) |
 
 ## Modality and Prompts
-The table below summarizes the different tasks, their corresponding modalities, text types, and examples of the instructions used for each task:
-| Task | Query | Text Types | Instructions Examples |
-|-------|-------|-------|-------|
-|  |  |  |  |
+The table below summarizes the different tasks, template and examples of an instruction data:
+| Task name | Template | Examples of an instruction data |
+|-------|-------|-------|
+| Audit NER | T (1) | "query": 文本: 通过对证券公司和国有企业审计，…。","在上面的文本中，请完成命名实体识别任务，即识别代表审计疑点('auditissue')、机构('ORG')、审计法律法规('auditlbasis')三类实体类型的实体名称，答案应遵循格式\"实体名称, 实体类型\"。"answer": "证券公司, ORG","label": ["O", "O", "O", "B-ORG", "I-ORG", "I-ORG", "I-ORG", "",…] |
+| Relation Classification | T (1) | "query":文本：将进口料件表体、报关单表头与加工贸易禁止类商品目录通过商品编号进行关联，筛选出涉及禁止类商品的加工贸易手册。实体对：禁止类商品-加工贸易禁止类商品目录", 根据提供的审计内容和实体对，从['审计问题', '审计事项', '审计依据', '审计方法', '审计机构','审计成果','被审计单位','涉及的行业或领域']中选择能准确表示该实体对关系的选项。请直接回答，如有不确定情况可回答unknown。"answer": 审计依据, "choices": ["unknown", "审计问题", "审计事项", "审计依据", "审计方法", "审计机构", "审计成果", "被审计单位", "涉及的行业或领域"], "gold": 3.  |
+| Definition of audit entity | T (2) | "query": 请问什么是营业外收入?, "answer": 该科目核算的是企业发生的与其生产经营无直接关系的各项收入，包括固定资产盘盈、处置固定资产净收益….。 |
+| Audit-legal relevant quesiton | T (2) | "query": 如果某公司违反了中华人民共和国证券法第九十条关于征集股东权利的规定，将受到何种法律后果？"answer":根据中华人民共和国证券法第一百九十九条，该公司将被责令改正并给予警告…。 |
+| Audit-issue relevant question | T(2) | "query":请问项目单位挤占挪用社会福利基金的表现形式是什么样的？"answer": 项目单位挤占挪用社会福利基金的表现形式：社会福利基金用于投资办企业…。 |
+| Other-audit relevant question | T(2) | "query": 请问资源环保审计包括的审计内容是什么?,"answer": 资源环保审计包括的审计内容是土地资源资产,…。 |
+| Risk/problem analysis | T (2) | "query": 在国有企业经济责任审计，资产审计可能存在哪些审计风险？"answer": 资产审计可能存在如下风险点：（一）客户管理效率低，没有全面调研客户资质、信用状况并动态跟踪，没有对客户分类，并采取不同的销售政策。…。 || Audit document generation | Audit document generation | Referred in Table 5 |
 
 ## Tasks
 | Level | Task name | Sub-task name | Train | Validation | Test | Annotation |
@@ -61,28 +67,6 @@ The table below summarizes the different tasks, their corresponding modalities, 
 | Documents Level | Audit item/risk/problem analysis | Audit item/risk/problem analysis | 544 | 151 | 77 | Extract from raw text |
 | Documents Level | Audit case/report generation | Audit case/report generation | 48 | 11 | 6 | Extract from raw text |
 | Total |  |  | 29908 | 3980 | 4941 |  |
-
-## Examples of the instruction data used in LLM tuning dataset
-| Task name | Template | Examples of an instruction data |
-|-------|-------|-------|
-| Audit NER | T (1) | "query": 文本: 通过对证券公司和国有企业审计，…。","在上面的文本中，请完成命名实体识别任务，即识别代表审计疑点('auditissue')、机构('ORG')、审计法律法规('auditlbasis')三类实体类型的实体名称，答案应遵循格式\"实体名称, 实体类型\"。
-"answer": "证券公司, ORG",
-"label": ["O", "O", "O", "B-ORG", "I-ORG", "I-ORG", "I-ORG", "",…] |
-| Relation Classification | T (1) | "query":文本：将进口料件表体、报关单表头与加工贸易禁止类商品目录通过商品编号进行关联，筛选出涉及禁止类商品的加工贸易手册。实体对：禁止类商品-加工贸易禁止类商品目录", 根据提供的审计内容和实体对，从['审计问题', '审计事项', '审计依据', '审计方法', '审计机构','审计成果','被审计单位','涉及的行业或领域']中选择能准确表示该实体对关系的选项。请直接回答，如有不确定情况可回答unknown。
-"answer": 审计依据, 
-"choices": ["unknown", "审计问题", "审计事项", "审计依据", "审计方法", "审计机构", "审计成果", "被审计单位", "涉及的行业或领域"], 
-"gold": 3.  |
-| Definition of audit entity | T (2) | "query": 请问什么是营业外收入?, 
-"answer": 该科目核算的是企业发生的与其生产经营无直接关系的各项收入，包括固定资产盘盈、处置固定资产净收益….。 |
-| Audit-legal relevant quesiton | T (2) | "query": 如果某公司违反了中华人民共和国证券法第九十条关于征集股东权利的规定，将受到何种法律后果？
-"answer":根据中华人民共和国证券法第一百九十九条，该公司将被责令改正并给予警告…。 |
-| Audit-issue relevant question | T(2) | "query":请问项目单位挤占挪用社会福利基金的表现形式是什么样的？
-"answer": 项目单位挤占挪用社会福利基金的表现形式：社会福利基金用于投资办企业…。 |
-| Other-audit relevant question | T(2) | "query": 请问资源环保审计包括的审计内容是什么?,
-"answer": 资源环保审计包括的审计内容是土地资源资产,…。 |
-| Risk/problem analysis | T (2) | "query": 在国有企业经济责任审计，资产审计可能存在哪些审计风险？
-"answer": 资产审计可能存在如下风险点：（一）客户管理效率低，没有全面调研客户资质、信用状况并动态跟踪，没有对客户分类，并采取不同的销售政策。…。 |
-| Audit document generation | Audit document generation | Referred in Table 5 |
 
 ## The overall performance of different LLMs on audit evaluation benchmark, * denotes 5-shot evaluation for the task.
 | Task | Sub-task name | Metric | Qwen-7B-chat | GLM3-7B | GPT-4 | AuditWen |
