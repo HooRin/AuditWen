@@ -97,9 +97,16 @@ The table below summarizes the different tasks, their corresponding modalities, 
 |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 
+## GPT_Q&A
+Construct a Q&A session on legal and regulatory content through GPT4.0
+
 ## Fine tuning
+Model fine-tuning related content reference https://github.com/QwenLM/Qwen
 
 ## Evaluation
+Model inference runs inference.py in the eval directory, while content evaluation runs evaluation.py in inference.py
 
 ## Citation
 If you use AuditWen in your work, please cite our paper.
+
+
