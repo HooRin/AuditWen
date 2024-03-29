@@ -91,4 +91,7 @@ Model inference runs inference.py in the eval directory, while content evaluatio
 ## Citation
 If you use AuditWen in your work, please cite our paper.
 
-
+## Thanks
+This project is based on the secondary development of existing open-source projects. We would like to express our gratitude to the relevant projects and R&D personnel.<br>
+1.https://github.com/The-FinAI/PIXIU<br>
+2.https://github.com/QwenLM/Qwen
