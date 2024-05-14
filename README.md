@@ -1,6 +1,5 @@
 # AuditWen
 An Open-source Large Language Model for Audit 
-Nanjing Audit Nniversity
 
 ## Introduction
 The first Chinese open-source audit model was developed by the School of Computer Science at Nanjing Audit University, based on Qwen-7B-chat and fine-tuning massive supervised audit related data. Having extensive audit knowledge and intelligent analysis capabilities, this model aims to provide comprehensive and effective problem analysis and audit basis recommendation support for the audit field.
