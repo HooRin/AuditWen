@@ -81,6 +81,7 @@ The table below summarizes the different tasks, template and examples of an inst
 | Risk/problem analysis | T (2) | "query": 在国有企业经济责任审计，资产审计可能存在哪些审计风险？"answer": 资产审计可能存在如下风险点：（一）客户管理效率低，没有全面调研客户资质、信用状况并动态跟踪，没有对客户分类，并采取不同的销售政策。…。 || Audit document generation | Audit document generation | Referred in Table 5 |
 
 ## Tasks
+<div align="center"><b> The details of our evaluation datasets. "Annotation" denotes the construction manner of the instruction data from raw data source. </b></div>
 | Level | Task name | Sub-task name | Train | Validation | Test | Annotation |
 |-------|-------|-------|-------|-------|-------|-------|
 | Sentence level | Audit NER | Audit NER | 4091 | 1022 | 1424 | human annotation |
@@ -151,9 +152,10 @@ print(response)
 #它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。
 
 # 2nd dialogue turn
-response, history = model.chat(tokenizer, "审计范围是指审计机构和审计人员在一定的审计目的和审计计划指导下，为完成审计任务所进行的审查所有事项。它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。", history=history)
+response, history = model.chat(tokenizer, "请问什么是财务报表审计？", history=history)
 print(response)
-#微观经济政策是指中央银行为实现宏观经济目标而对企业、居民个人及各种金融性机构所制定并采取的各种政策。
+#财务报表审计是指注册会计师对被审计单位编制的财务报表的真实性、合法性、完整性作出审计结论，提出审计意见，形成审计报告的一项审计业务。
+#财务报表审计是注册会计师接受委托，按照独立审计准则的要求，对企事业单位的财务报表进行审査，并据此发表审计意见，出具审计报告。所发行的审计报告，为报表使用者做出正确决策提供可靠的参考资料
 
 ```
 
