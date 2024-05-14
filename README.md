@@ -1,10 +1,6 @@
 # AuditWen
 An Open-source Large Language Model for Audit 
 
-Huang Jiajia,Zhu Haoran,Xu Chao,Zhan Tianming,Xie Qianqian,Huang Jimin
-
-Nanjing Audit Nniversity
-
 ## Introduction
 The first Chinese open-source audit model was developed by the School of Computer Science at Nanjing Audit University, based on Qwen-7B-chat and fine-tuning massive supervised audit related data. Having extensive audit knowledge and intelligent analysis capabilities, this model aims to provide comprehensive and effective problem analysis and audit basis recommendation support for the audit field.
 
@@ -54,11 +50,13 @@ Taking audit procedures as an example, the table below shows some structured dat
 |公共工程审计|工程项目征地拆迁审计|征地拆迁除要满足一般的审计程序之外，需要特殊考虑的审计程序或工作主要有：...|
 
 
+
 Next, construct the corresponding instructions through the following scheme：<br>
 <b>
 Question：在[审计类型]中，[审计事项]的审计程序是什么？<br>
 Answer:[审计程序]<br>
 </b>
+（更多类型任务的数据参考目录/corpus/Raw structured data下的文件Raw structured data.xlsx）</b>
 Based on the above template, the converted instruction data is as follows:
 | Query | Answer |
 |-------|-------|
@@ -105,17 +103,123 @@ The table below summarizes the different tasks, template and examples of an inst
 ## GPT_Q&A
 Construct a Q&A session on legal and regulatory content through GPT4.0
 
-## Fine tuning
-Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
-The download address for the AuditWen model:
+## Quick Start
+### Directory Structure
+----/finetune/ Qwen's finetune Project -- Instruction fine-tuning <br>
+----/PIXIU/ PIXIU Project -- NLP Task Inference and Evaluation <br>
+----/qa_eval/ Q&A Task Reasoning Reasoning and Evaluation <br>
+-----/src/ evaluate related packages <br>
+-----/quick_interference.py/ Immediate inference code <br>
+-----/interence.py/ task-based inference code <br>
+-----/evaluation.py/ evaluation code <br>
+--/pics/ Related pictures <br>
+---/GPT_Q&A/ <br>
+----/code/ GPT4 generates the code for the Q&A <br>
+----/data/ partial data <br>
+---/corpus/<br>
+----/benchmark datatset/ Test set for various tasks <br>
+----/result/ Inference results of various task test sets on various pedestals <br>
+----/Raw structured data/ Raw Structured data
 
-## Evaluation
-Model inference runs inference.py in the eval directory, while content evaluation runs evaluation.py in inference.py
+### Inference Model
+To reason with AuditWen, you simply enter a few lines of code, as shown below. Remember to pass the correct model name or path, such as "/model/AuditWen". However, make sure you are using the latest code. (This project also provides quick_interference.py with proxy code located in the directory /AuditWen/src/qa_eval)
+```bash
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.generation import GenerationConfig
+
+# Model names: "/model/AuditWen"
+tokenizer = AutoTokenizer.from_pretrained( "/model/AuditWen", trust_remote_code=True)
+
+# use auto mode, automatically select precision based on the device.
+model = AutoModelForCausalLM.from_pretrained(
+    " /model/AuditWen",
+    device_map="auto",
+    trust_remote_code=True
+).eval()
+#You can specify different generation length, top p and other related superparameters
+model.generation_config = GenerationConfig.from_pretrained(" /model/AuditWen",, trust_remote_code=True, )  
+
+# 1st dialogue turn
+response, history = model.chat(tokenizer, "请问什么是审计范围?", history=None)
+print(response)
+#审计范围是指审计机构和审计人员在一定的审计目的和审计计划指导下，为完成审计任务所进行的审查所有事项。
+#它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。
+
+# 2nd dialogue turn
+response, history = model.chat(tokenizer, "审计范围是指审计机构和审计人员在一定的审计目的和审计计划指导下，为完成审计任务所进行的审查所有事项。它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。", history=history)
+print(response)
+#微观经济政策是指中央银行为实现宏观经济目标而对企业、居民个人及各种金融性机构所制定并采取的各种政策。
+
+```
+
+
+### Fine tuning
+Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
+
+
+### Evaluation-PIXIU
+The NLP tasks, namely NER, RE, and NL tasks, are evaluated based on PIXIU. This project has optimized the evaluation method to ensure the accuracy of the evaluation results.
+#### Environmental preparation
+```bash
+cd PIXIU
+pip install -r requirements.txt
+cd PIXIU/src/financial-evaluation
+pip install -e .[multilingual]
+```
+#### Data path setting
+In the __init__.py file under path \PIXIU\src\tasks, set the name of the task and the corresponding method of data processing，Taking "flare_zh_auditner": flare.AuditNER, "as an example, the method for auditing the data loading and processing of the named entity identification task is AuditNER under flare.py.Next, the parameter DATASET_PATH in the AuditNER method is set to the data set path.
+#### Evaluation
+To evaluate a model hosted on the HuggingFace Hub (for instance, AuditWen), use this command:
+```bash
+python eval.py \
+    --model
+    "hf-causal-vllm"
+    --model_args
+    "pretrained=/model/AuditWen,tokenizer=/model/AuditWen,trust_remote_code=True"
+    --tasks
+    "flare_zh_auditner"
+```
+
+Commercial APIs：
+```bash
+export OPENAI_API_SECRET_KEY=YOUR_KEY_HERE
+python eval.py \
+    --model gpt-4 \
+    --tasks "flare_zh_auditner"
+```
+
+### Evaluation-QA
+Model inference is run inference.py under the qa_eval directory, while content evaluation is run evaluation.py under the qa_eval directory
+#### Inference
+Reasoning data in the form of a visible directory/AuditWen corpus/benchmark datatset q&a type task under json files in the directory.
+#### Evaluation
+The evaluation method of Q&A tasks is optimized based on the evaluation method of PIXIU Q&A tasks. rouge_chinese is used for evaluation, and the word segmentation "Audit Word segmentation.txt" located in the directory /AuditWen/src/qa_eval/src is loaded for evaluation. The evaluation of bart and bert is also replaced with the Chinese version, and the evaluation effect is somewhat improved compared with PIXIU.<br>
+This project provides download links of bart and bert models, users can download to the local, and set the bart path in the corresponding place of the code. Due to the project being deployed Autodl platform, Bert model file location for/root/cache/huggingface/hub/models - Bert - base - Chinese/snapshots/main.<br>
+Note: Since the lm_eval and bart_score packages used in the evaluation.py code are all self-contained packages of the project, you need to manually add the package path in the interpreter to ensure the normal operation of the code.
+
+## Model download
+AuditWen：https://huggingface.co/HooRin/AuditWen<br>
+Qwen-7B-chat：https://huggingface.co/Qwen/Qwen-7B-Chat<br>
+ChatGLM3-6B:https://huggingface.co/THUDM/chatglm3-6b<br>
+bart-base-chinese:https://huggingface.co/fnlp/bart-base-chinese<br>
+bert-base-chinese:https://huggingface.co/google-bert/bert-base-chinese<br>
+
 
 ## Citation
 If you use AuditWen in your work, please cite our paper.
+@misc{2024AuditWen,
+      title={AuditWen：An Open-source Large Language Model for Audit }, 
+      author={},
+      year={2024},
+      eprint={},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 
 ## Thanks
 This project is based on the secondary development of existing open-source projects. We would like to express our gratitude to the relevant projects and R&D personnel.<br>
 1.https://github.com/The-FinAI/PIXIU<br>
 2.https://github.com/QwenLM/Qwen
+
+## Contact
+E-mail:
