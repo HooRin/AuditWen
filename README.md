@@ -42,6 +42,30 @@ Further derive requirement of LLM applied in audit domain is LLM can act as an i
 | Q5 | Based on the uploaded audit ledger list, audit ledgers belonging to the same audit issue are merged into the same document and output. (基于上传的审计台账列表，将属于同一审计问题的审计台账归并到同一文档中并输出。) |
 
 ## Modality and Prompts
+On the basis of collecting and organizing structured data for various audit tasks, write instruction data.
+Taking audit procedures as an example, the table below shows some structured data：
+<br>
+<div align="center"><b>原始结构化数据</b></div>
+
+| 审计类型 | 审计事项 | 审计程序 |
+|-------|-------|-------|
+|公共工程审计|工程项目内部控制审计|关于工程项目内部控制审计程序，中天恒3C框架研制的工程项目内部控制审计一般程序包括工程项目内部控制有效性调查、初步评价、风险评估、控制测试、评价缺陷、审计评价、形成意见等...|
+|公共工程审计|工程项目投资决策审计|工程项目投资决策审计程序：·收集工程项目投资决策相关法律法规。·收集工程项目投资决策相关材料。·调查了解工程项目投资决策情况。·查证核实工程项目投资决策情况（对专业技术文件可委托专业中介机构进行审核，并出具专业审核意见）...|
+|公共工程审计|工程项目征地拆迁审计|征地拆迁除要满足一般的审计程序之外，需要特殊考虑的审计程序或工作主要有：...|
+
+
+Next, construct the corresponding instructions through the following scheme：<br>
+<b>
+Question：在[审计类型]中，[审计事项]的审计程序是什么？<br>
+Answer:[审计程序]<br>
+</b>
+Based on the above template, the converted instruction data is as follows:
+| Query | Answer |
+|-------|-------|
+|在公共工程审计中，工程项目内部控制审计的审计程序是什么？|关于工程项目内部控制审计程序，中天恒3C框架研制的工程项目内部控制审计一般程序包括工程项目内部控制有效性调查、初步评价、风险评估、控制测试、评价缺陷、审计评价、形成意见等...|
+|在公共工程审计中，工程项目投资决策审计的审计程序是什么？|工程项目投资决策审计程序：·收集工程项目投资决策相关法律法规。·收集工程项目投资决策相关材料。·调查了解工程项目投资决策情况。·查证核实工程项目投资决策情况（对专业技术文件可委托专业中介机构进行审核，并出具专业审核意见）...|
+|在公共工程审计中，工程项目征地拆迁审计的审计程序是什么？|征地拆迁除要满足一般的审计程序之外，需要特殊考虑的审计程序或工作主要有：...|
+
 The table below summarizes the different tasks, template and examples of an instruction data:
 | Task name | Template | Examples of an instruction data |
 |-------|-------|-------|
@@ -91,4 +115,7 @@ Model inference runs inference.py in the eval directory, while content evaluatio
 ## Citation
 If you use AuditWen in your work, please cite our paper.
 
-
+## Thanks
+This project is based on the secondary development of existing open-source projects. We would like to express our gratitude to the relevant projects and R&D personnel.<br>
+1.https://github.com/The-FinAI/PIXIU<br>
+2.https://github.com/QwenLM/Qwen
