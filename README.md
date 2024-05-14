@@ -105,27 +105,50 @@ Construct a Q&A session on legal and regulatory content through GPT4.0
 
 ## Quick Start
 ### Directory Structure
----/src/<br>
-----/finetune/ Qwen的finetune项目——指令微调<br>
-----/PIXIU/ PIXIU项目——NLP任务推理及评估<br>
-----/qa_eval/ 问答类任务推理推理及评估<br>
------/src/ 评估相关的包<br>
------/quick_interference.py/ 立即进行推理代码<br>
------/interence.py/ 任务型推理代码<br>
------/evaluation.py/ 评估代码<br>
-
----/pics/ 相关图片<br>
+----/finetune/ Qwen's finetune Project -- Instruction fine-tuning <br>
+----/PIXIU/ PIXIU Project -- NLP Task Inference and Evaluation <br>
+----/qa_eval/ Q&A Task Reasoning Reasoning and Evaluation <br>
+-----/src/ evaluate related packages <br>
+-----/quick_interference.py/ Immediate inference code <br>
+-----/interence.py/ task-based inference code <br>
+-----/evaluation.py/ evaluation code <br>
+--/pics/ Related pictures <br>
 ---/GPT_Q&A/ <br>
-----/code/ GPT4生成问答的代码<br>
-----/data/ 部分数据<br>
+----/code/ GPT4 generates the code for the Q&A <br>
+----/data/ partial data <br>
 ---/corpus/<br>
-----/benchmark datatset/ 各类任务的测试集<br>
-----/result/ 各类任务测试集在各基座上的推理结果<br>
-----/Raw structured data/ 原始结构化数据<br>
+----/benchmark datatset/ Test set for various tasks <br>
+----/result/ Inference results of various task test sets on various pedestals <br>
+----/Raw structured data/ Raw Structured data
 
 ### Inference Model
-要使用AuditWen进行推理，您只需输入几行代码，如下所示。请记住传递正确的模型名称或路径，例如“/model/AuditWen”。但是，请确保您使用的是最新的代码。
+To reason with AuditWen, you simply enter a few lines of code, as shown below. Remember to pass the correct model name or path, such as "/model/AuditWen". However, make sure you are using the latest code. (This project also provides quick_interference.py with proxy code located in the directory /AuditWen/src/qa_eval)
 ```bash
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.generation import GenerationConfig
+
+# Model names: "/model/AuditWen"
+tokenizer = AutoTokenizer.from_pretrained( "/model/AuditWen", trust_remote_code=True)
+
+# use auto mode, automatically select precision based on the device.
+model = AutoModelForCausalLM.from_pretrained(
+    " /model/AuditWen",
+    device_map="auto",
+    trust_remote_code=True
+).eval()
+#You can specify different generation length, top p and other related superparameters
+model.generation_config = GenerationConfig.from_pretrained(" /model/AuditWen",, trust_remote_code=True, )  
+
+# 1st dialogue turn
+response, history = model.chat(tokenizer, "请问什么是审计范围?", history=None)
+print(response)
+#审计范围是指审计机构和审计人员在一定的审计目的和审计计划指导下，为完成审计任务所进行的审查所有事项。
+#它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。
+
+# 2nd dialogue turn
+response, history = model.chat(tokenizer, "审计范围是指审计机构和审计人员在一定的审计目的和审计计划指导下，为完成审计任务所进行的审查所有事项。它包括审计对象、审计期间、以及对这些审计对象各个方面所进行的审查程度。", history=history)
+print(response)
+#微观经济政策是指中央银行为实现宏观经济目标而对企业、居民个人及各种金融性机构所制定并采取的各种政策。
 
 ```
 
