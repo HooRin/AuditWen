@@ -2,7 +2,7 @@
 An Open-source Large Language Model for Audit 
 
 ## Introduction
-The first Chinese open-source audit model was developed by the School of Computer Science at Nanjing Audit University, based on Qwen-7B-chat and fine-tuning massive supervised audit related data. Having extensive audit knowledge and intelligent analysis capabilities, this model aims to provide comprehensive and effective problem analysis and audit basis recommendation support for the audit field.
+The first Chinese open source audit model is based on Qwen-7B-chat and fine-tunes a large amount of supervisory audit related data. The model has a wide range of audit knowledge and intelligent analysis capabilities, aiming to provide comprehensive and effective problem analysis and audit foundation recommendations for the audit field.
 
 ## Explain
 1. This project is still constantly iterating and updating. Considering the wide coverage of the audit field and the serious shortage of domain dataset resources, we have only released fine-tuning models on the audit laws, regulations, and qualitative question and answer datasets;
@@ -12,6 +12,7 @@ The first Chinese open-source audit model was developed by the School of Compute
 ### Audit issue summary and Laws Recommendation
 The primary task of audit is to identify any potential audit issues within a project and determine which laws and regulations can serve as the audit basis. From this perspective, auditors are seeking LLMs to assist in summarizing audit issues based on audit working papers and recommending suitable laws and regulations as both qualitative and punishment basis. 
 The primary challenge in the application is that an internal auditor may have a divergent qualitative basis for an audit issue compared to a social auditor based on the case description in the audit working paper. For example, an internal auditor may use items from enterprise internal control manual as qualitative basis without any penalty provision, while a social auditor may refer to items  in Accounting Law and Criminal Law for punishment. To address this challenge, we propose an audit issue schema that summarizes audit issue from case description and aligns them with the clauses of laws and regulations simultaneously。We hope to bridge a gap between the clause of laws and regulations and the audit issue:
+<div align="center"><b>Qualitative basis of audit problem and recommended model of punishment basis</b></div>
 <p align="center">
     <img src="https://github.com/HooRin/AuditWen/blob/main/pics/pic1.png" alt="Description of the image" width="1200">
 </p>
@@ -155,7 +156,26 @@ print(response)
 
 ### Fine tuning
 Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
-
+To prepare the training data, you need to put all the samples into a list and save them to a json file. Each sample is a dictionary, consisting of an id and a list of conversations. Here is a list of simple examples with 1 sample:
+```bash
+[
+  {
+    "id": "identity_0",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "请问审计事项'工程设计审计'的审计类型是什么？"
+      },
+      {
+        "from": "assistant",
+        "value": "工程设计审计的审计类型是工程项目竣工决算审计。"
+      }
+    ]
+  }
+]
+```
+此外，本项目也提供了包含2000条的训练集位于目录/AuditWen/corpus下，可供使用者参考。<br>
+数据准备好后，您可以使用目录/AuditWen/src/finetune/Qwen-main/finetune下提供的shell脚本来运行finetuning。请记住指定数据文件的路径。详细使用可参考Qwen项目的介绍。
 
 ### Evaluation-PIXIU
 The NLP tasks, namely NER, RE, and NL tasks, are evaluated based on PIXIU. This project has optimized the evaluation method to ensure the accuracy of the evaluation results.
