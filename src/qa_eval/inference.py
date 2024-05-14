@@ -35,7 +35,7 @@ def loadData(json_file_path):
     dump_json(json_answer,"")
 
 if __name__ == '__main__':
-
+     #设置问题路径即json文件
     filename1 = ""
     selected_sentences = loadData(filename1)
 
