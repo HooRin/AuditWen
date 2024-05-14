@@ -106,8 +106,18 @@ The table below summarizes the different tasks, template and examples of an inst
 
 ## The overall performance of different LLMs on audit evaluation benchmark, * denotes 5-shot evaluation for the task.
 
-Task name	Sub-task name	Metric	Qwen-7B-chat	ChatGLM3-6B	 GPT-4	AuditWen
-NER	entity_F1	0.140*	0.015*	0.108*	0.535*
+| Task name | Sub-task name | Metric | Qwen-7B-chat | ChatGLM3-6B | GPT-4 | AuditWen |
+|-------|-------|-------|-------|-------|-------|-------|
+|NER|NER|entity_F1|0.140*|0.015*|0.108*|0.535*|
+||||||||
+||||||||
+||||||||
+||||||||
+||||||||
+||||||||
+||||||||
+||||||||
+					
 Relation Classification	accuracy	--/0.085*	0.376/0.342*	0.402/0.624*	0.615/0.188*
 	F1	--/0.037*	0.243/0.373*	0.432/0.649*	0.744/0.220*
 	missing	0.410/0.00	0.008/0.000	0.000/0.000	0.350/0.274
