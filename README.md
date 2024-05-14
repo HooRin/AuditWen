@@ -121,42 +121,49 @@ The table below summarizes the different tasks, template and examples of an inst
 |Phrase classification|legal name classification|accuracy|--/0.146*|0.394/0.468*|0.637/0.647*|0.752/0.431*|
 |Phrase classification|legal name classification|F1|--/0.075*|0.388/0.428*|0.623/0.639*|0.774/0.405*|
 |Phrase classification|legal name classification|missing|0.766/0.165|0.000/0.000|0.004/0.000|0.050/0.037|
-||||||||
-||||||||
-||||||||
-||||||||
-					
-						
-						
-						
-						
-						
-Definition of audit entity	ROUGE-1	0.245	0.22	0.202	0.298
-	ROUGE-2	0.053	0.037	0.037	0.121
-	ROUGE-L	0.178	0.156	0.121	0.237
-	BF1	0.678	0.670	0.662	0.702
-	BART Score	-4.527	-4.535	-4.391	-4.175
-Audit-legal relevant question	BF1	0.696	0.671	0.665	0.723
-	BART Score	-3.659	-3.356	-3.424	-3.480
-Audit-issue relevant question	audit issue summary	BF1	0.634	0.644	0.634	0.642
-		BART Score	-4.470	-4.485	-4.524	-4.456
-	audit issue describe	BF1	0.696	0.674	0.655	0.792
-		BART Score	-4.048	-3.827	-3.996	-3.044
-	legal recommendation  	ROUGE-1	0.247	0.268	0.275	0.530
-		ROUGE-2	0.061	0.063	0.083	0.386
-		ROUGE-L	0.150	0.152	0.151	0.442
-		BF1	0.654	0.665	0.677	0.785
-		BART Score	-4.799	-4.192	-3.661	-3.406
-Other-audit relevant question	audit procedures and material 	BF1	0.67	0.682	0.694	0.746
-		BART Score	-5.127	-4.681	-5.166	-4.514
-	audit items and objectives	BF1	0.723	0.697	0.634	0.907
-		BART Score	 -3.794	-3.650	-4.069	-1.587
-	other question 	BF1	0.704	0.663	0.635	0.900
-		BART Score	-3.284	 -3.171	-2.985	-1.202
-Risk/problem analysis	BF1	0.67	0.678	0.667	0.84
-	BART Score	-4.854	-3.61	-3.291	-3.031
-Audit case/report generation	BF1	0.658	0.668	0.670	0.684
-	BART Score	-5.584	-5.003	-4.782	-5.011
+|Definition of audit entity|Definition of audit entity|ROUGE-1|0.245|0.22|0.202|0.298|
+|Definition of audit entity|Definition of audit entity|ROUGE-2|0.053|0.037|0.037|0.121|
+|Definition of audit entity|Definition of audit entity|ROUGE-L|0.178|0.156|0.121|0.237|
+|Definition of audit entity|Definition of audit entity|BF1|0.678|0.670|0.662|0.702|
+|Definition of audit entity|Definition of audit entity|BART Score|-4.527|-4.535|-4.391|-4.175|
+|Audit-legal relevant question|Audit-legal relevant question|BF1|0.696|0.671|0.665|0.723|
+|Audit-legal relevant question|Audit-legal relevant question|BART Score|-3.659|-3.356|-3.424|-3.480|
+|Audit-issue relevant question|audit issue summary|BF1|0.634|0.644|0.634|0.642|
+|Audit-issue relevant question|audit issue summary|BART Score|-4.470|-4.485|-4.524|-4.456|
+|Audit-issue relevant question|audit issue describe|BF1	0.696|0.674|0.655|0.792|
+|Audit-issue relevant question|audit issue describe|BART Score|-4.048|-3.827|-3.996|-3.044|
+|Audit-issue relevant question|legal recommendation|ROUGE-1|0.247|0.268|0.275|0.530|
+|Audit-issue relevant question|legal recommendation|ROUGE-2|0.061|0.063|0.083|0.386|
+|Audit-issue relevant question|legal recommendation|ROUGE-L|0.150|0.152|0.151|0.442|
+|Audit-issue relevant question|legal recommendation|BF1	0.654|0.665|0.677|0.785|
+|Audit-issue relevant question|legal recommendation|BART Score|-4.799|-4.192|-3.661|-3.406|
+|Other-audit relevant question|audit procedures and material|BF1|0.67|0.682|0.694|0.746|
+|Other-audit relevant question|audit procedures and material|BART Score|-5.127|-4.681|-5.166|-4.514|
+|Other-audit relevant question|audit items and objectives|BF1|0.723|0.697|0.634|0.907|
+|Other-audit relevant question|audit items and objectives|BART Score|-3.794|-3.650|-4.069|-1.587|
+|Other-audit relevant question|other question|BF1|0.704|0.663|0.635|0.900|
+|Other-audit relevant question|other question|BART Score|-3.284|-3.171|-2.985|-1.202|
+|Risk/problem analysis|Risk/problem analysis|BF1|0.67|0.678|0.667|0.84|	
+|Risk/problem analysis|Risk/problem analysis|BART Score|-4.854|-3.61|-3.291|-3.031|
+|Audit case/report generation|Audit case/report generation|BF1|0.658|0.668|0.670|0.684|
+|Audit case/report generation|Audit case/report generation|BART Score|-5.584|-5.003|-4.782|-5.011|
+
+
+		
+		
+		
+		
+	  	
+		
+		
+		
+		
+		
+	 	
+		
+	
+	
+
 
 
 
