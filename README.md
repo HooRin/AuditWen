@@ -56,7 +56,7 @@ Next, construct the corresponding instructions through the following scheme：<b
 Question：在[审计类型]中，[审计事项]的审计程序是什么？<br>
 Answer:[审计程序]<br>
 </b>
-（更多类型任务的数据参考目录/data/Raw structured data下的文件Raw structured data.xlsx）</b>
+（更多类型任务的数据参考目录/corpus/Raw structured data下的文件Raw structured data.xlsx）</b>
 Based on the above template, the converted instruction data is as follows:
 | Query | Answer |
 |-------|-------|
@@ -104,6 +104,27 @@ The table below summarizes the different tasks, template and examples of an inst
 Construct a Q&A session on legal and regulatory content through GPT4.0
 
 ## Quick Start
+### Directory Structure
+---/src/
+----/finetune/ Qwen的finetune项目——指令微调
+----/PIXIU/ PIXIU项目——NLP任务推理及评估
+----/qa_eval/ 问答类任务推理推理及评估
+-----/src/ 评估相关的包
+-----/interence.py/ 推理代码
+-----/evaluation.py/ 评估代码
+---/pics/ 相关图片
+---/GPT_Q&A/ 
+----/code/ GPT4生成问答的代码
+----/data/ 部分数据
+---/corpus/
+----/benchmark datatset/ 各类任务的测试集
+----/result/ 各类任务测试集在各基座上的推理结果
+----/Raw structured data/ 原始结构化数据
+
+
+
+
+
 ### Fine tuning
 Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
 The download address for the AuditWen model:
@@ -121,12 +142,32 @@ pip install -e .[multilingual]
 In the __init__.py file under path \PIXIU\src\tasks, set the name of the task and the corresponding method of data processing，Taking "flare_zh_auditner": flare.AuditNER, "as an example, the method for auditing the data loading and processing of the named entity identification task is AuditNER under flare.py.Next, the parameter DATASET_PATH in the AuditNER method is set to the data set path.
 #### Evaluation
 To evaluate a model hosted on the HuggingFace Hub (for instance, AuditWen), use this command:
+```bash
+python eval.py \
+    --model
+    "hf-causal-vllm"
+    --model_args
+    "pretrained=/model/AuditWen,tokenizer=/model/AuditWen,trust_remote_code=True"
+    --tasks
+    "flare_zh_auditner"
+```
 
-
-
+Commercial APIs：
+```bash
+export OPENAI_API_SECRET_KEY=YOUR_KEY_HERE
+python eval.py \
+    --model gpt-4 \
+    --tasks "flare_zh_auditner"
+```
 
 ### Evaluation-QA
-Model inference runs inference.py in the eval directory, while content evaluation runs evaluation.py in inference.py
+Model inference is run inference.py under the qa_eval directory, while content evaluation is run evaluation.py under the qa_eval directory
+#### Inference
+Reasoning data in the form of a visible directory/AuditWen corpus/benchmark datatset q&a type task under json files in the directory.
+#### Evaluation
+The evaluation method of Q&A tasks is optimized based on the evaluation method of PIXIU Q&A tasks. rouge_chinese is used for evaluation, and the word segmentation "Audit Word segmentation.txt" located in the directory /AuditWen/src/qa_eval/src is loaded for evaluation. The evaluation of bart and bert is also replaced with the Chinese version, and the evaluation effect is somewhat improved compared with PIXIU.<br>
+This project provides download links of bart and bert models, users can download to the local, and set the bart path in the corresponding place of the code. Due to the project being deployed Autodl platform, Bert model file location for/root/cache/huggingface/hub/models - Bert - base - Chinese/snapshots/main.<br>
+Note: Since the lm_eval and bart_score packages used in the evaluation.py code are all self-contained packages of the project, you need to manually add the package path in the interpreter to ensure the normal operation of the code.
 
 ## Model download
 AuditWen：https://huggingface.co/HooRin/AuditWen<br>
