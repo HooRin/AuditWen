@@ -1,8 +1,5 @@
 # AuditWen
 An Open-source Large Language Model for Audit 
-
-Huang Jiajia,Zhu Haoran,Xu Chao,Zhan Tianming,Xie Qianqian,Huang Jimin
-
 Nanjing Audit Nniversity
 
 ## Introduction
@@ -123,6 +120,10 @@ pip install -e .[multilingual]
 ```
 #### Data path setting
 In the __init__.py file under path \PIXIU\src\tasks, set the name of the task and the corresponding method of data processing，Taking "flare_zh_auditner": flare.AuditNER, "as an example, the method for auditing the data loading and processing of the named entity identification task is AuditNER under flare.py.Next, the parameter DATASET_PATH in the AuditNER method is set to the data set path.
+#### Evaluation
+To evaluate a model hosted on the HuggingFace Hub (for instance, AuditWen), use this command:
+
+
 
 
 ### Evaluation-QA
