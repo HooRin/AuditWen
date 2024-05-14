@@ -110,8 +110,10 @@ Construct a Q&A session on legal and regulatory content through GPT4.0
 ----/PIXIU/ PIXIU项目——NLP任务推理及评估<br>
 ----/qa_eval/ 问答类任务推理推理及评估<br>
 -----/src/ 评估相关的包<br>
------/interence.py/ 推理代码<br>
+-----/quick_interference.py/ 立即进行推理代码<br>
+-----/interence.py/ 任务型推理代码<br>
 -----/evaluation.py/ 评估代码<br>
+
 ---/pics/ 相关图片<br>
 ---/GPT_Q&A/ <br>
 ----/code/ GPT4生成问答的代码<br>
@@ -121,13 +123,16 @@ Construct a Q&A session on legal and regulatory content through GPT4.0
 ----/result/ 各类任务测试集在各基座上的推理结果<br>
 ----/Raw structured data/ 原始结构化数据<br>
 
+### Inference Model
+要使用AuditWen进行推理，您只需输入几行代码，如下所示。请记住传递正确的模型名称或路径，例如“/model/AuditWen”。但是，请确保您使用的是最新的代码。
+```bash
 
-
+```
 
 
 ### Fine tuning
 Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
-The download address for the AuditWen model:
+
 
 ### Evaluation-PIXIU
 The NLP tasks, namely NER, RE, and NL tasks, are evaluated based on PIXIU. This project has optimized the evaluation method to ensure the accuracy of the evaluation results.
