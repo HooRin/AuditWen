@@ -105,21 +105,21 @@ Construct a Q&A session on legal and regulatory content through GPT4.0
 
 ## Quick Start
 ### Directory Structure
----/src/
-----/finetune/ Qwen的finetune项目——指令微调
-----/PIXIU/ PIXIU项目——NLP任务推理及评估
-----/qa_eval/ 问答类任务推理推理及评估
------/src/ 评估相关的包
------/interence.py/ 推理代码
------/evaluation.py/ 评估代码
----/pics/ 相关图片
----/GPT_Q&A/ 
-----/code/ GPT4生成问答的代码
-----/data/ 部分数据
----/corpus/
-----/benchmark datatset/ 各类任务的测试集
-----/result/ 各类任务测试集在各基座上的推理结果
-----/Raw structured data/ 原始结构化数据
+---/src/<br>
+----/finetune/ Qwen的finetune项目——指令微调<br>
+----/PIXIU/ PIXIU项目——NLP任务推理及评估<br>
+----/qa_eval/ 问答类任务推理推理及评估<br>
+-----/src/ 评估相关的包<br>
+-----/interence.py/ 推理代码<br>
+-----/evaluation.py/ 评估代码<br>
+---/pics/ 相关图片<br>
+---/GPT_Q&A/ <br>
+----/code/ GPT4生成问答的代码<br>
+----/data/ 部分数据<br>
+---/corpus/<br>
+----/benchmark datatset/ 各类任务的测试集<br>
+----/result/ 各类任务测试集在各基座上的推理结果<br>
+----/Raw structured data/ 原始结构化数据<br>
 
 
 
