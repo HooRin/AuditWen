@@ -109,27 +109,28 @@ The table below summarizes the different tasks, template and examples of an inst
 | Task name | Sub-task name | Metric | Qwen-7B-chat | ChatGLM3-6B | GPT-4 | AuditWen |
 |-------|-------|-------|-------|-------|-------|-------|
 |NER|NER|entity_F1|0.140*|0.015*|0.108*|0.535*|
-||||||||
-||||||||
-||||||||
-||||||||
+|Relation Classification|Relation Classification|accuracy|--/0.085*|0.376/0.342*|0.402/0.624*|0.615/0.188*|
+|Relation Classification|Relation Classification|F1|--/0.037*|0.243/0.373*|0.432/0.649*|0.744/0.220*|
+|Relation Classification|Relation Classification|missing|0.410/0.00|0.008/0.000|0.000/0.000|0.350/0.274|
+|Phrase classification|audit entity classification*|accuracy|0.716/0.763*|0.493/0.540|0.679/0.810*|0.601/0.720*|
+|Phrase classification|audit entity classification*|F1|0.710/0.734*|0.583/0.612*|0.697/0.816*|0.612/0.716*|
+|Phrase classification|audit entity classification*|missing|0.042/0.00|0.146//0.000|0.023/0.000|0.077/0.000*|
+|Phrase classification|audit-issue phrase classification|accuracy|--/0.399*|0.254/0.353*|0.464/0.543*|0.437/0.601*|
+|Phrase classification|audit-issue phrase classification|F1|--/0.347*|0.193/0.252*|0.484/0.557*|0.428/0.0.595*|
+|Phrase classification|audit-issue phrase classification|missing|0.751/0.000|0.078/0.058|0.000/0.000|0.085/0.037|
+|Phrase classification|legal name classification|accuracy|--/0.146*|0.394/0.468*|0.637/0.647*|0.752/0.431*|
+|Phrase classification|legal name classification|F1|--/0.075*|0.388/0.428*|0.623/0.639*|0.774/0.405*|
+|Phrase classification|legal name classification|missing|0.766/0.165|0.000/0.000|0.004/0.000|0.050/0.037|
 ||||||||
 ||||||||
 ||||||||
 ||||||||
 					
-Relation Classification	accuracy	--/0.085*	0.376/0.342*	0.402/0.624*	0.615/0.188*
-	F1	--/0.037*	0.243/0.373*	0.432/0.649*	0.744/0.220*
-	missing	0.410/0.00	0.008/0.000	0.000/0.000	0.350/0.274
-Phrase classification	audit entity classification*	accuracy	0.716/0.763*	0.493/0.540	0.679/0.810*	0.601/0.720*
-		F1	0.710/0.734*	0.583/0.612*	0.697/0.816*	0.612/0.716*
-		missing	0.042/0.00	0.146//0.000	0.023/0.000	0.077/0.000*
-	audit-issue phrase classification	accuracy	--/0.399*	0.254/0.353*	0.464/0.543*	0.437/0.601*
-		F1	--/0.347*	0.193/0.252*	0.484/0.557*	0.428/0.0.595*
-		missing	0.751/0.000	0.078/0.058	0.000/0.000	0.085/0.037
-	legal name classification	accuracy	--/0.146*	0.394/0.468*	0.637/0.647*	0.752/0.431*
-		F1	--/0.075*	0.388/0.428*	0.623/0.639*	0.774/0.405*
-		missing	0.766/0.165	0.000/0.000	0.004/0.000	0.050/0.037
+						
+						
+						
+						
+						
 Definition of audit entity	ROUGE-1	0.245	0.22	0.202	0.298
 	ROUGE-2	0.053	0.037	0.037	0.121
 	ROUGE-L	0.178	0.156	0.121	0.237
