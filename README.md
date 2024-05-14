@@ -105,9 +105,50 @@ The table below summarizes the different tasks, template and examples of an inst
 | Total |  |  | 29908 | 3980 | 4941 |  |
 
 ## The overall performance of different LLMs on audit evaluation benchmark, * denotes 5-shot evaluation for the task.
-<p align="center">
-    <img src="https://github.com/HooRin/AuditWen/blob/main/pics/evaluation_result.png" alt="Description of the image" width="1200">
-</p>
+
+Task name	Sub-task name	Metric	Qwen-7B-chat	ChatGLM3-6B	 GPT-4	AuditWen
+NER	entity_F1	0.140*	0.015*	0.108*	0.535*
+Relation Classification	accuracy	--/0.085*	0.376/0.342*	0.402/0.624*	0.615/0.188*
+	F1	--/0.037*	0.243/0.373*	0.432/0.649*	0.744/0.220*
+	missing	0.410/0.00	0.008/0.000	0.000/0.000	0.350/0.274
+Phrase classification	audit entity classification*	accuracy	0.716/0.763*	0.493/0.540	0.679/0.810*	0.601/0.720*
+		F1	0.710/0.734*	0.583/0.612*	0.697/0.816*	0.612/0.716*
+		missing	0.042/0.00	0.146//0.000	0.023/0.000	0.077/0.000*
+	audit-issue phrase classification	accuracy	--/0.399*	0.254/0.353*	0.464/0.543*	0.437/0.601*
+		F1	--/0.347*	0.193/0.252*	0.484/0.557*	0.428/0.0.595*
+		missing	0.751/0.000	0.078/0.058	0.000/0.000	0.085/0.037
+	legal name classification	accuracy	--/0.146*	0.394/0.468*	0.637/0.647*	0.752/0.431*
+		F1	--/0.075*	0.388/0.428*	0.623/0.639*	0.774/0.405*
+		missing	0.766/0.165	0.000/0.000	0.004/0.000	0.050/0.037
+Definition of audit entity	ROUGE-1	0.245	0.22	0.202	0.298
+	ROUGE-2	0.053	0.037	0.037	0.121
+	ROUGE-L	0.178	0.156	0.121	0.237
+	BF1	0.678	0.670	0.662	0.702
+	BART Score	-4.527	-4.535	-4.391	-4.175
+Audit-legal relevant question	BF1	0.696	0.671	0.665	0.723
+	BART Score	-3.659	-3.356	-3.424	-3.480
+Audit-issue relevant question	audit issue summary	BF1	0.634	0.644	0.634	0.642
+		BART Score	-4.470	-4.485	-4.524	-4.456
+	audit issue describe	BF1	0.696	0.674	0.655	0.792
+		BART Score	-4.048	-3.827	-3.996	-3.044
+	legal recommendation  	ROUGE-1	0.247	0.268	0.275	0.530
+		ROUGE-2	0.061	0.063	0.083	0.386
+		ROUGE-L	0.150	0.152	0.151	0.442
+		BF1	0.654	0.665	0.677	0.785
+		BART Score	-4.799	-4.192	-3.661	-3.406
+Other-audit relevant question	audit procedures and material 	BF1	0.67	0.682	0.694	0.746
+		BART Score	-5.127	-4.681	-5.166	-4.514
+	audit items and objectives	BF1	0.723	0.697	0.634	0.907
+		BART Score	 -3.794	-3.650	-4.069	-1.587
+	other question 	BF1	0.704	0.663	0.635	0.900
+		BART Score	-3.284	 -3.171	-2.985	-1.202
+Risk/problem analysis	BF1	0.67	0.678	0.667	0.84
+	BART Score	-4.854	-3.61	-3.291	-3.031
+Audit case/report generation	BF1	0.658	0.668	0.670	0.684
+	BART Score	-5.584	-5.003	-4.782	-5.011
+
+
+
 
 ## GPT_Q&A
 Construct a Q&A session on legal and regulatory content through GPT4.0
