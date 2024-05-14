@@ -54,11 +54,13 @@ Taking audit procedures as an example, the table below shows some structured dat
 |公共工程审计|工程项目征地拆迁审计|征地拆迁除要满足一般的审计程序之外，需要特殊考虑的审计程序或工作主要有：...|
 
 
+
 Next, construct the corresponding instructions through the following scheme：<br>
 <b>
 Question：在[审计类型]中，[审计事项]的审计程序是什么？<br>
 Answer:[审计程序]<br>
 </b>
+（更多类型任务的数据参考目录/data/Raw structured data下的文件Raw structured data.xlsx）</b>
 Based on the above template, the converted instruction data is as follows:
 | Query | Answer |
 |-------|-------|
@@ -105,12 +107,34 @@ The table below summarizes the different tasks, template and examples of an inst
 ## GPT_Q&A
 Construct a Q&A session on legal and regulatory content through GPT4.0
 
-## Fine tuning
+## Quick Start
+### Fine tuning
 Model fine-tuning related content reference https://github.com/QwenLM/Qwen<br>
 The download address for the AuditWen model:
 
-## Evaluation
+### Evaluation-PIXIU
+The NLP tasks, namely NER, RE, and NL tasks, are evaluated based on PIXIU. This project has optimized the evaluation method to ensure the accuracy of the evaluation results.
+#### Environmental preparation
+```bash
+cd PIXIU
+pip install -r requirements.txt
+cd PIXIU/src/financial-evaluation
+pip install -e .[multilingual]
+```
+#### Data path setting
+In the __init__.py file under path \PIXIU\src\tasks, set the name of the task and the corresponding method of data processing，Taking "flare_zh_auditner": flare.AuditNER, "as an example, the method for auditing the data loading and processing of the named entity identification task is AuditNER under flare.py.Next, the parameter DATASET_PATH in the AuditNER method is set to the data set path.
+
+
+### Evaluation-QA
 Model inference runs inference.py in the eval directory, while content evaluation runs evaluation.py in inference.py
+
+## Model download
+AuditWen：https://huggingface.co/HooRin/AuditWen<br>
+Qwen-7B-chat：https://huggingface.co/Qwen/Qwen-7B-Chat<br>
+ChatGLM3-6B:https://huggingface.co/THUDM/chatglm3-6b<br>
+bart-base-chinese:https://huggingface.co/fnlp/bart-base-chinese<br>
+bert-base-chinese:https://huggingface.co/google-bert/bert-base-chinese<br>
+
 
 ## Citation
 If you use AuditWen in your work, please cite our paper.
