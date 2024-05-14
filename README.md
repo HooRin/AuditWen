@@ -33,6 +33,7 @@ The secondary task of LLM used in audit is to answer question related to audit, 
 ### Audit assistant  
 Further derive requirement of LLM applied in audit domain is LLM can act as an intelligent assistant and help auditor to extract specified phrase from audit document, do accounting relevant numerical calculation, generate an outline for an audit report and further fill content based on the given audit working papers. The possible case questions are list in Table 2. Audit assistant usually need to execute fine-grained NLP task step by step, such as information extraction, multi-documents summarization and document generation. Additionally, audit assistants must achieve collaborative work between humans and machines with the guidance of human-provided knowledge:
 <div align="center"><b>The potential tasks that may be assigned to an audit intelligent assistant.</b></div>
+
 | Id | Query |
 |-------|-------|
 | Q1 | Please extract entity about the audited organization from the following documents. (请从下面文档中抽取出被审计单位信息。) |
@@ -71,6 +72,7 @@ Based on the above template, the converted instruction data is as follows:
 
 The table below summarizes the different tasks, template and examples of an instruction data:
 <div align="center"><b>Examples of the instruction data used in LLM tuning dataset</b></div>
+
 | Task name | Template | Examples of an instruction data |
 |-------|-------|-------|
 | Audit NER | T (1) | "query": 文本: 通过对证券公司和国有企业审计，…。","在上面的文本中，请完成命名实体识别任务，即识别代表审计疑点('auditissue')、机构('ORG')、审计法律法规('auditlbasis')三类实体类型的实体名称，答案应遵循格式\"实体名称, 实体类型\"。"answer": "证券公司, ORG","label": ["O", "O", "O", "B-ORG", "I-ORG", "I-ORG", "I-ORG", "",…] |
@@ -83,6 +85,7 @@ The table below summarizes the different tasks, template and examples of an inst
 
 ## Tasks
 <div align="center"><b> The details of our evaluation datasets. "Annotation" denotes the construction manner of the instruction data from raw data source. </b></div>
+
 | Level | Task name | Sub-task name | Train | Validation | Test | Annotation |
 |-------|-------|-------|-------|-------|-------|-------|
 | Sentence level | Audit NER | Audit NER | 4091 | 1022 | 1424 | human annotation |
