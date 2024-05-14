@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47286064-5243-4111-9175-5a146b1e18b4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/base_model_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/glm_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qwen_evaluate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qwen_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Qwen-14B-chat_推理.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chatglm-transformer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/evaluate-metric/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/evaluate-metric/bert_score/.ipynb_checkpoints/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rouge/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rouge/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rouge/gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rouge/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rouge/rouge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/summary_bartscore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test_auditLLama-2-7b.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vllm_wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chatlm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatlm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/financial-evaluation" beforeDir="false" afterPath="$PROJECT_DIR$/src/financial-evaluation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/gpt3.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/gpt3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/huggingface.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/huggingface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tasks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tasks/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tasks/flare.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tasks/flare.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2Y7J1jd3apw9TWOiqsaugemjulV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "E:/数据处理2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PIXIU\src" />
+      <recent name="E:\PIXIU" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PIXIU\src\rouge" />
+      <recent name="E:\PIXIU\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.eval">
+    <configuration name="Qwen-14B-chat_推理" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Qwen-14B-chat_推理.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="base_model_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/base_model_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chatglm-transformer" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/chatglm-transformer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/download.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="eval" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="OPENAI_API_SECRET_KEY" value="sk-70iW9bQsLnisy3UIA0408291Fe6140Fd92922d0d0616E707" />
+        <env name="PYTHONPATH" value="$PYTHONPATH:/root/autodl-tmp/PIXIU/src/financial-evaluation" />
+        <env name="TRANSFORMERS_OFFLINE" value="1" />
+        <env name="trust_remote_code" value="True" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Remote Python 3.8.10 (sftp://root@connect.neimeng.seetacloud.com:14133/root/.virtualenvs/PIXIU/bin/python)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/eval.py" />
+      <option name="PARAMETERS" value="--model &quot;hf-causal-vllm&quot; --model_args &quot;pretrained=/root/autodl-tmp/PIXIU/chancefocus/chatglm3-6b,tokenizer=/root/autodl-tmp/PIXIU/chancefocus/chatglm3-6b,trust_remote_code=True,add_special_tokens=True&quot; --tasks &quot;flare_zh_auditnl&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flare" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tasks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/tasks/flare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="glm_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/glm_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/interface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="profile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/profile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qwen_evaluate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Remote Python 3.8.10 (sftp://root@connect.neimeng.seetacloud.com:14133/root/.virtualenvs/PIXIU/bin/python)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qwen_evaluate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qwen_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Remote Python 3.8.10 (sftp://root@connect.neimeng.seetacloud.com:14133/root/.virtualenvs/PIXIU/bin/python)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qwen_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_auditLLama-2-7b" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test_auditLLama-2-7b.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vllm_wrapper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vllm_wrapper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_auditLLama-2-7b.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="PIXIU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test_auditLLama-2-7b.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.eval" />
+      <item itemvalue="Python.interface" />
+      <item itemvalue="Python.chatglm-transformer" />
+      <item itemvalue="Python.test_auditLLama-2-7b" />
+      <item itemvalue="Python.download" />
+      <item itemvalue="Python.qwen_test" />
+      <item itemvalue="Python.qwen_evaluate" />
+      <item itemvalue="Python.Qwen-14B-chat_推理" />
+      <item itemvalue="Python.flare" />
+      <item itemvalue="Python.glm_test" />
+      <item itemvalue="Python.profile" />
+      <item itemvalue="Python.base_model_test" />
+      <item itemvalue="Python.vllm_wrapper" />
+      <item itemvalue="Python tests.pytest in test_auditLLama-2-7b.py" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.base_model_test" />
+        <item itemvalue="Python.glm_test" />
+        <item itemvalue="Python.profile" />
+        <item itemvalue="Python.vllm_wrapper" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="47286064-5243-4111-9175-5a146b1e18b4" name="更改" comment="" />
+      <created>1699870472177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699870472177</updated>
+      <workItem from="1699870473332" duration="2016000" />
+      <workItem from="1699874399285" duration="2668000" />
+      <workItem from="1699877593341" duration="890000" />
+      <workItem from="1699926315834" duration="525000" />
+      <workItem from="1699929036146" duration="9642000" />
+      <workItem from="1700011230221" duration="13668000" />
+      <workItem from="1700097723840" duration="14857000" />
+      <workItem from="1700185535662" duration="14592000" />
+      <workItem from="1700376388542" duration="9801000" />
+      <workItem from="1700443176436" duration="14562000" />
+      <workItem from="1700529215708" duration="26159000" />
+      <workItem from="1700617472482" duration="1203000" />
+      <workItem from="1700793763388" duration="5525000" />
+      <workItem from="1700922009282" duration="672000" />
+      <workItem from="1701049992658" duration="5888000" />
+      <workItem from="1701085653624" duration="14000" />
+      <workItem from="1701086621681" duration="743000" />
+      <workItem from="1701222800052" duration="595000" />
+      <workItem from="1701243930571" duration="3970000" />
+      <workItem from="1701250936442" duration="1590000" />
+      <workItem from="1701309236235" duration="6331000" />
+      <workItem from="1701399227416" duration="2141000" />
+      <workItem from="1701653043794" duration="11288000" />
+      <workItem from="1701685512394" duration="94000" />
+      <workItem from="1701689396937" duration="5703000" />
+      <workItem from="1701736086862" duration="20429000" />
+      <workItem from="1701763209655" duration="6578000" />
+      <workItem from="1701838489796" duration="1848000" />
+      <workItem from="1701843360802" duration="19630000" />
+      <workItem from="1701913369448" duration="1529000" />
+      <workItem from="1701916017812" duration="3511000" />
+      <workItem from="1701935391730" duration="2384000" />
+      <workItem from="1701997695574" duration="1814000" />
+      <workItem from="1702096978262" duration="1949000" />
+      <workItem from="1702170695477" duration="260000" />
+      <workItem from="1702288830286" duration="20000" />
+      <workItem from="1702372916455" duration="6471000" />
+      <workItem from="1702430341112" duration="12769000" />
+      <workItem from="1702643075034" duration="1268000" />
+      <workItem from="1702696924831" duration="20515000" />
+      <workItem from="1702865590114" duration="995000" />
+      <workItem from="1702874051331" duration="1200000" />
+      <workItem from="1702952049985" duration="13150000" />
+      <workItem from="1703036906053" duration="13715000" />
+      <workItem from="1703121991342" duration="12239000" />
+      <workItem from="1703208537492" duration="1190000" />
+      <workItem from="1703232856734" duration="1014000" />
+      <workItem from="1703308377674" duration="595000" />
+      <workItem from="1703478576689" duration="401000" />
+      <workItem from="1703642406802" duration="23454000" />
+      <workItem from="1703728144691" duration="28692000" />
+      <workItem from="1703814754641" duration="8850000" />
+      <workItem from="1703911963968" duration="18036000" />
+      <workItem from="1703992622618" duration="15142000" />
+      <workItem from="1704178949954" duration="63000" />
+      <workItem from="1704767212858" duration="679000" />
+      <workItem from="1704799523895" duration="67000" />
+      <workItem from="1705126261380" duration="610000" />
+      <workItem from="1705135796693" duration="830000" />
+      <workItem from="1707805063394" duration="2238000" />
+      <workItem from="1707810878102" duration="1667000" />
+      <workItem from="1707873074167" duration="10314000" />
+      <workItem from="1707899859662" duration="28000" />
+      <workItem from="1707960584541" duration="15000" />
+      <workItem from="1707960817954" duration="19000" />
+      <workItem from="1707967164895" duration="569000" />
+      <workItem from="1708153687273" duration="18893000" />
+      <workItem from="1708305279588" duration="592000" />
+      <workItem from="1708326819835" duration="9486000" />
+      <workItem from="1708568287937" duration="11548000" />
+      <workItem from="1708653774883" duration="10064000" />
+      <workItem from="1708675206347" duration="12597000" />
+      <workItem from="1708738608054" duration="2209000" />
+      <workItem from="1708752162864" duration="960000" />
+      <workItem from="1708765145761" duration="590000" />
+      <workItem from="1708930045217" duration="1452000" />
+      <workItem from="1709018731525" duration="2443000" />
+      <workItem from="1709096186744" duration="2381000" />
+      <workItem from="1709171086339" duration="15321000" />
+      <workItem from="1709357738916" duration="593000" />
+      <workItem from="1709516097692" duration="12863000" />
+      <workItem from="1710382385621" duration="2624000" />
+      <workItem from="1710983420932" duration="20000" />
+      <workItem from="1710983731015" duration="1397000" />
+      <workItem from="1711171575842" duration="31000" />
+      <workItem from="1711174160297" duration="58951000" />
+      <workItem from="1711350933715" duration="1204000" />
+      <workItem from="1711590853680" duration="5920000" />
+      <workItem from="1712211760083" duration="9012000" />
+      <workItem from="1712284316356" duration="8278000" />
+      <workItem from="1712322216053" duration="266000" />
+      <workItem from="1712468157942" duration="7788000" />
+      <workItem from="1712554746920" duration="6138000" />
+      <workItem from="1712561433934" duration="7618000" />
+      <workItem from="1712642621503" duration="842000" />
+      <workItem from="1712725826832" duration="4930000" />
+      <workItem from="1712798365099" duration="7092000" />
+      <workItem from="1712985161462" duration="9545000" />
+      <workItem from="1713158626475" duration="8842000" />
+      <workItem from="1713407636046" duration="5466000" />
+      <workItem from="1713860806736" duration="3815000" />
+      <workItem from="1715406472180" duration="9846000" />
+      <workItem from="1715495651614" duration="617000" />
+      <workItem from="1715499580639" duration="828000" />
+      <workItem from="1715507492399" duration="30010000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/275362901/transformers/models/auto/configuration_auto.py</url>
+          <line>1050</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/275362901/transformers/models/auto/tokenization_auto.py</url>
+          <line>741</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/275362901/transformers/dynamic_module_utils.py</url>
+          <line>618</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/275362901/transformers/dynamic_module_utils.py</url>
+          <line>587</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/275362901/transformers/models/auto/tokenization_auto.py</url>
+          <line>745</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/chatglm-transformer.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/chatglm-transformer.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/1700476159/lm_eval/models/huggingface.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/1700476159/lm_eval/base.py</url>
+          <line>896</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/-1815063600/1700476159/lm_eval/base.py</url>
+          <line>538</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/summary_bartscore.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/552461643/275362901/tiktoken/core.py</url>
+          <line>257</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/552461643/1700476159/lm_eval/models/huggingface.py</url>
+          <line>394</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/financial-evaluation/lm_eval/models/huggingface.py</url>
+          <line>523</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.2/remote_sources/958813304/275362901/tiktoken/core.py</url>
+          <line>257</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/evaluator.py</url>
+          <line>431</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/tasks/flare.py</url>
+          <line>1226</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/evaluator.py</url>
+          <line>392</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.dataset" />
+        <watch expression="generation_config" />
+        <watch expression="tokens" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PIXIU$chatglm_transformer.coverage" NAME="chatglm-transformer Coverage Results" MODIFIED="1703994390398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$test_auditLLama_2_7b.coverage" NAME="test_auditLLama-2-7b Coverage Results" MODIFIED="1703656806011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$qwen_evaluate.coverage" NAME="qwen_evaluate Coverage Results" MODIFIED="1711275206297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PIXIU$Qwen_14B_chat_.coverage" NAME="Qwen-14B-chat_推理 Coverage Results" MODIFIED="1715594048794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$interface.coverage" NAME="interface 覆盖结果" MODIFIED="1701653791666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$eval.coverage" NAME="eval Coverage Results" MODIFIED="1715652545615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$vllm_wrapper.coverage" NAME="vllm_wrapper Coverage Results" MODIFIED="1708234633219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PIXIU$flare.coverage" NAME="flare Coverage Results" MODIFIED="1713516420180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tasks" />
+    <SUITE FILE_PATH="coverage/PIXIU$summary_bartscore.coverage" NAME="summary_bartscore Coverage Results" MODIFIED="1704013486430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$download.coverage" NAME="download Coverage Results" MODIFIED="1703680531070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$glm_test.coverage" NAME="glm_test Coverage Results" MODIFIED="1712995719144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PIXIU$pytest_in_test_auditLLama_2_7b_py.coverage" NAME="pytest in test_auditLLama-2-7b.py Coverage Results" MODIFIED="1703656426098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PIXIU$qwen_test.coverage" NAME="qwen_test Coverage Results" MODIFIED="1713939862636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PIXIU$base_model_test.coverage" NAME="base_model_test Coverage Results" MODIFIED="1713946221195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PIXIU$chatlm.coverage" NAME="chatlm Coverage Results" MODIFIED="1703998855761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>
