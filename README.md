@@ -46,15 +46,13 @@ Further derive requirement of LLM applied in audit domain is LLM can act as an i
 On the basis of collecting and organizing structured data for various audit tasks, write instruction data.
 Taking audit procedures as an example, the table below shows some structured data：
 <br>
-<div align="center"><b>原始结构化数据</b></div>
+<div align="center"><b>Raw structured data</b></div>
 
 | 审计类型 | 审计事项 | 审计程序 |
 |-------|-------|-------|
 |公共工程审计|工程项目内部控制审计|关于工程项目内部控制审计程序，中天恒3C框架研制的工程项目内部控制审计一般程序包括工程项目内部控制有效性调查、初步评价、风险评估、控制测试、评价缺陷、审计评价、形成意见等...|
 |公共工程审计|工程项目投资决策审计|工程项目投资决策审计程序：·收集工程项目投资决策相关法律法规。·收集工程项目投资决策相关材料。·调查了解工程项目投资决策情况。·查证核实工程项目投资决策情况（对专业技术文件可委托专业中介机构进行审核，并出具专业审核意见）...|
 |公共工程审计|工程项目征地拆迁审计|征地拆迁除要满足一般的审计程序之外，需要特殊考虑的审计程序或工作主要有：...|
-
-
 
 Next, construct the corresponding instructions through the following scheme：<br>
 <b>
@@ -63,7 +61,8 @@ Answer:[审计程序]<br>
 </b>
 （更多类型任务的数据参考目录/corpus/Raw structured data下的文件Raw structured data.xlsx）</b>
 Based on the above template, the converted instruction data is as follows:
-<div align="center"><b>Raw structured data</b></div>
+<div align="center"><b>Instruction data set presentation</b></div>
+
 | Query | Answer |
 |-------|-------|
 |在公共工程审计中，工程项目内部控制审计的审计程序是什么？|关于工程项目内部控制审计程序，中天恒3C框架研制的工程项目内部控制审计一般程序包括工程项目内部控制有效性调查、初步评价、风险评估、控制测试、评价缺陷、审计评价、形成意见等...|
