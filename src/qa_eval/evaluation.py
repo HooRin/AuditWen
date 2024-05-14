@@ -125,6 +125,7 @@ class QAwithString():
         #return res
     def bart_score(self, items):
         golds, preds = zip(*items)
+       #bart-base-chinese路径设置
         bart_scorer = BARTScorer(device="cuda", checkpoint="/../bart-base-chinese")
         res = bart_scorer.score(srcs=preds, tgts=golds, batch_size=8)
         return sum(res) / len(res)
