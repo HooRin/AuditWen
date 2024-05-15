@@ -148,46 +148,27 @@ The table below summarizes the different tasks, template and examples of an inst
 |Audit case/report generation|Audit case/report generation|BF1|0.658|0.668|0.670|0.684|
 |Audit case/report generation|Audit case/report generation|BART Score|-5.584|-5.003|-4.782|-5.011|
 
-
-		
-		
-		
-		
-	  	
-		
-		
-		
-		
-		
-	 	
-		
-	
-	
-
-
-
-
-
 ## GPT_Q&A
 Construct a Q&A session on legal and regulatory content through GPT4.0
 
 ## Quick Start
 ### Directory Structure
+---/src/ evaluate related packages <br>
 ----/finetune/ Qwen's finetune Project -- Instruction fine-tuning <br>
 ----/PIXIU/ PIXIU Project -- NLP Task Inference and Evaluation <br>
 ----/qa_eval/ Q&A Task Reasoning Reasoning and Evaluation <br>
------/src/ evaluate related packages <br>
 -----/quick_interference.py/ Immediate inference code <br>
 -----/interence.py/ task-based inference code <br>
 -----/evaluation.py/ evaluation code <br>
---/pics/ Related pictures <br>
+---/pics/ Related pictures <br>
 ---/GPT_Q&A/ <br>
 ----/code/ GPT4 generates the code for the Q&A <br>
 ----/data/ partial data <br>
 ---/corpus/<br>
 ----/benchmark datatset/ Test set for various tasks <br>
 ----/result/ Inference results of various task test sets on various pedestals <br>
-----/Raw structured data/ Raw Structured data
+----/Raw structured data/ Raw Structured data <br>
+----/train/ Training instruction set <br>
 
 ### Inference Model
 To reason with AuditWen, you simply enter a few lines of code, as shown below. Remember to pass the correct model name or path, such as "/model/AuditWen". However, make sure you are using the latest code. (This project also provides quick_interference.py with proxy code located in the directory /AuditWen/src/qa_eval)
