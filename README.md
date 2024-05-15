@@ -223,8 +223,8 @@ To prepare the training data, you need to put all the samples into a list and sa
   }
 ]
 ```
-此外，本项目也提供了包含2000条的训练集位于目录/AuditWen/corpus下，可供使用者参考。<br>
-数据准备好后，您可以使用目录/AuditWen/src/finetune/Qwen-main/finetune下提供的shell脚本来运行finetuning。请记住指定数据文件的路径。详细使用可参考Qwen项目的介绍。
+In addition, this project also provides a training set containing 2000 entries located in the directory/AuditWen/corpus for users to refer to.<br>
+After the data is ready, you can use the shell script provided in the directory/AuditWen/src/finetune/Qwen main/finetune to run finetuning. Please remember to specify the path to the data file. For detailed usage, please refer to the introduction of the Qwen project.
 
 ### Evaluation-PIXIU
 The NLP tasks, namely NER, RE, and NL tasks, are evaluated based on PIXIU. This project has optimized the evaluation method to ensure the accuracy of the evaluation results.
