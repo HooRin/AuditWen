@@ -282,8 +282,8 @@ If you use AuditWen in your work, please cite our paper.<br>
       author={},<br>
       year={2024},<br>
       eprint={},<br>
-      archivePrefix={arXiv},<br>
-      primaryClass={cs.CL}<br>
+      archivePrefix={},<br>
+      primaryClass={}<br>
 }<br>
 
 ## Thanks
