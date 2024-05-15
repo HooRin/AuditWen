@@ -59,7 +59,7 @@ Next, construct the corresponding instructions through the following scheme：<b
 Question：在[审计类型]中，[审计事项]的审计程序是什么？<br>
 Answer:[审计程序]<br>
 </b>
-（更多类型任务的数据参考目录/corpus/Raw structured data下的文件Raw structured data.xlsx）</b>
+（For more types of tasks, refer to the file Raw structured data.xlsx in the directory/corpus/Raw structured data）<br>
 Based on the above template, the converted instruction data is as follows:
 <div align="center"><b>Instruction data set presentation</b></div>
 
