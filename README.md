@@ -268,7 +268,6 @@ This project provides download links of bart and bert models, users can download
 Note: Since the lm_eval and bart_score packages used in the evaluation.py code are all self-contained packages of the project, you need to manually add the package path in the interpreter to ensure the normal operation of the code.
 
 ## Model download
-AuditWen：https://huggingface.co/HooRin/AuditWen/tree/main<br>
 Qwen-7B-chat：https://huggingface.co/Qwen/Qwen-7B-Chat<br>
 ChatGLM3-6B:https://huggingface.co/THUDM/chatglm3-6b<br>
 bart-base-chinese:https://huggingface.co/fnlp/bart-base-chinese<br>
