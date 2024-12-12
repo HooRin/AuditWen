@@ -276,6 +276,7 @@ bert-base-chinese:https://huggingface.co/google-bert/bert-base-chinese<br>
 
 ## Citation
 If you use AuditWen in your work, please cite our paper.<br>
+```bash
 @misc{2024AuditWen,<br>
       title={AuditWen:An Open-source Large Language Model for Audit }, <br>
       author={Jiajia Huang, Haoran Zhu, Chao Xu, Tianming Zhan, Qianqian Xie, Jimin Huang},<br>
@@ -285,7 +286,7 @@ If you use AuditWen in your work, please cite our paper.<br>
       url = {https://aclanthology.org/2024.emnlp-main.28},<br>
       Cite = {Huang J, Zhu H, Xu C, et al. AuditWen: An Open-Source Large Language Model for Audit[C]//China National Conference on Chinese Computational Linguistics. Singapore: Springer Nature Singapore, 2024: 505-521.}
 }<br>
-
+```
 ## Thanks
 This project is based on the secondary development of existing open-source projects. We would like to express our gratitude to the relevant projects and R&D personnel.<br>
 1.https://github.com/The-FinAI/PIXIU<br>
