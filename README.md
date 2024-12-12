@@ -277,12 +277,13 @@ bert-base-chinese:https://huggingface.co/google-bert/bert-base-chinese<br>
 ## Citation
 If you use AuditWen in your work, please cite our paper.<br>
 @misc{2024AuditWen,<br>
-      title={AuditWen：An Open-source Large Language Model for Audit }, <br>
-      author={},<br>
+      title={AuditWen:An Open-source Large Language Model for Audit }, <br>
+      author={Jiajia Huang, Haoran Zhu, Chao Xu, Tianming Zhan, Qianqian Xie, Jimin Huang},<br>
       year={2024},<br>
-      eprint={},<br>
-      archivePrefix={},<br>
-      primaryClass={}<br>
+      booktitle = {China National Conference on Chinese Computational Linguistics},<br>
+      pages = {505–521},<br>
+      url = {https://aclanthology.org/2024.emnlp-main.28},<br>
+      Cite = {Huang J, Zhu H, Xu C, et al. AuditWen: An Open-Source Large Language Model for Audit[C]//China National Conference on Chinese Computational Linguistics. Singapore: Springer Nature Singapore, 2024: 505-521.}
 }<br>
 
 ## Thanks
