@@ -2,7 +2,7 @@
 An Open-source Large Language Model for Audit 
 
 ## Introduction
-The first Chinese open source audit model is based on Qwen-7B-chat and fine-tunes a large amount of supervisory audit related data. The model has a wide range of audit knowledge and intelligent analysis capabilities, aiming to provide comprehensive and effective problem analysis and audit foundation recommendations for the audit field.
+The first Chinese open source audit model is based on Qwen-7B-chat and fine-tunes a large amount of supervisory audit related data. The model has a wide range of audit knowledge and intelligent analysis capabilities, aiming to provide comprehensive and effective problem analysis and audit foundation recommendations for the audit field.In the future, we will closely follow the update of qwen version and launch qwen 2.5 version. Stay tuned.
 
 ## Explain
 1. This project is still constantly iterating and updating. Considering the wide coverage of the audit field and the serious shortage of domain dataset resources, we have only released fine-tuning models on the audit laws, regulations, and qualitative question and answer datasets;
