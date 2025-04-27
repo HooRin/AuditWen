@@ -272,7 +272,7 @@ Qwen-7B-chat：https://huggingface.co/Qwen/Qwen-7B-Chat<br>
 ChatGLM3-6B:https://huggingface.co/THUDM/chatglm3-6b<br>
 bart-base-chinese:https://huggingface.co/fnlp/bart-base-chinese<br>
 bert-base-chinese:https://huggingface.co/google-bert/bert-base-chinese<br>
-
+AuditWen:https://huggingface.co/HooRin/AuditWen<br>
 
 ## Citation
 If you use AuditWen in your work, please cite our paper.<br>
